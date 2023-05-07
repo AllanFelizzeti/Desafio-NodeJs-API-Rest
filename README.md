@@ -1,6 +1,6 @@
 # Desafio-NodeJs-API-Rest
 
-#1. Tecnologias utilizadas com suas respectivas versões (MySQL, Node.JS, Express.js);
+# 1. Tecnologias utilizadas com suas respectivas versões (MySQL, Node.JS, Express.js);
 
 MySQL: Banco de dados utilizado para armazenar e gerenciar os dados. Para simular o banco de dados localmente, foi utilizado o XAMPP, uma ferramenta que inclui o MySQL, PHP e Apache em um pacote fácil de instalar. Foi baixada a versão 8.2.4 do XAMPP, que inclui o MySQL 8.2.4.
 link para baixar: https://www.apachefriends.org/pt_br/download.html
@@ -25,7 +25,7 @@ Além disso, foram utilizadas as seguintes dependências de desenvolvimento:
 "ts-node-dev": "^2.0.0": Monitoramento de arquivos TypeScript para reinicialização automática do servidor
 "typescript": "4.5.2": Linguagem de programação utilizada para escrever o código-fonte do projeto.
 
-#2. Orientações de execução do banco de dados, com sua estrutura (incluir Dump SQL das tabelas);
+# 2. Orientações de execução do banco de dados, com sua estrutura (incluir Dump SQL das tabelas);
 
 Para isso, basta iniciar o XAMPP e iniciar os serviços do Apache e do MySQL. Em seguida, acesse o painel de controle do MySQL clicando no botão "Admin" ao lado da linha correspondente ao MySQL. Isso abrirá o phpMyAdmin, uma ferramenta de gerenciamento de banco de dados.
 
@@ -43,7 +43,7 @@ Para importar o dump para um banco de dados vazio ou para um banco de dados exis
 
 Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tutorial pode ser encontrado no seguinte link: https://www.youtube.com/watch?v=mFI88qPAdJI. Após a importação, o banco de dados deve estar pronto para ser utilizado novamente.
 
-#3. Orientações de instalação e execução do ambiente em localhost;
+# 3. Orientações de instalação e execução do ambiente em localhost;
 
 1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
 Em seguida, digite o seguinte comando:
@@ -52,16 +52,17 @@ Isso irá clonar o repositório do GitHub para a sua máquina.
 
 2.Abra a pasta "api" do projeto no seu editor de código favorito e, em seguida, abra o terminal.
 Para instalar as dependências do projeto, digite o seguinte comando:
-<strong> npm install </strong>
-<strong> yarn install </strong>
+npm install
+yarn install
 Isso irá instalar todas as dependências necessárias para executar o projeto.
 
 3.Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
-<strong> npm run server </strong>
+npm run server
 Se tudo estiver correto, você verá a mensagem "Database ok" e "Server started on port 3333🚀" no terminal.
 É importante notar que o projeto só poderá ser executado se o banco de dados já estiver rodando.
 
-#4. Documentação com uma explicação do formato de entrada esperado de cada rota,
+# 4. Documentação com uma explicação do formato de entrada esperado de cada rota,
+
 bem como o formato de saída de dados de cada rota.
 
 1.) Para importar o arquivo test.sql em seu gerenciador de banco de dados favorito, você pode seguir os seguintes passos:
