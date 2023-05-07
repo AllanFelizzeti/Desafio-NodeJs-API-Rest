@@ -25,6 +25,7 @@ class Empresa {
 
   @Column('varchar', { length: 100, nullable: false})
   complemento: string;
+  licencas: number;
 }
 
 export default Empresa;
