@@ -10,20 +10,21 @@ Node.js: Plataforma de desenvolvimento de aplicativos JavaScript do lado do serv
 
 Express.js: Framework para Node.js utilizado para criar aplicativos da Web e APIs. As seguintes versões foram utilizadas para as bibliotecas de tipos e dependências do Express.js:
 
-"@types/cors": "^2.8.13"
-"@types/express": "^4.17.17"
-"cors": "^2.8.5"
-"express": "^4.18.2"
-"express-async-errors": "^3.1.1"
-Outras dependências utilizadas no projeto:
-"mysql2": "^3.3.0": Driver de banco de dados para o MySQL
-"reflect-metadata": "^0.1.13": Biblioteca para trabalhar com metadados em tempo de execução
-"typeorm": "0.3.15": Biblioteca ORM (Object-Relational Mapping) para o TypeScript
+    "@types/cors": "^2.8.13"
+    "@types/express": "^4.17.17"
+    "cors": "^2.8.5"
+    "express": "^4.18.2"
+    "express-async-errors": "^3.1.1"
+    Outras dependências utilizadas no projeto:
+    "mysql2": "^3.3.0": Driver de banco de dados para o MySQL
+    "reflect-metadata": "^0.1.13": Biblioteca para trabalhar com metadados em tempo de execução
+    "typeorm": "0.3.15": Biblioteca ORM (Object-Relational Mapping) para o TypeScript
+
 Além disso, foram utilizadas as seguintes dependências de desenvolvimento:
 
-"ts-node": "10.7.0": TypeScript em tempo de execução
-"ts-node-dev": "^2.0.0": Monitoramento de arquivos TypeScript para reinicialização automática do servidor
-"typescript": "4.5.2": Linguagem de programação utilizada para escrever o código-fonte do projeto.
+    "ts-node": "10.7.0": TypeScript em tempo de execução
+    "ts-node-dev": "^2.0.0": Monitoramento de arquivos TypeScript para reinicialização automática do servidor
+    "typescript": "4.5.2": Linguagem de programação utilizada para escrever o código-fonte do projeto.
 
 # 2. Orientações de execução do banco de dados, com sua estrutura (incluir Dump SQL das tabelas);
 
@@ -45,50 +46,52 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
 # 3. Orientações de instalação e execução do ambiente em localhost;
 
-1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
-Em seguida, digite o seguinte comando:
-<strong> gh repo clone AllanFelizzeti/Desafio-NodeJs-API-Rest </strong>
-Isso irá clonar o repositório do GitHub para a sua máquina.
+    1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
+    Em seguida, digite o seguinte comando:
+    gh repo clone AllanFelizzeti/Desafio-NodeJs-API-Rest
+    Isso irá clonar o repositório do GitHub para a sua máquina.
 
-2.Abra a pasta "api" do projeto no seu editor de código favorito e, em seguida, abra o terminal.
-Para instalar as dependências do projeto, digite o seguinte comando:
-npm install
-yarn install
-Isso irá instalar todas as dependências necessárias para executar o projeto.
+    2.Abra a pasta "api" do projeto no seu editor de código favorito e, em seguida, abra o terminal.
+    Para instalar as dependências do projeto, digite o seguinte comando:
+    npm install
+    yarn install
+    Isso irá instalar todas as dependências necessárias para executar o projeto.
 
-3.Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
-npm run server
-Se tudo estiver correto, você verá a mensagem "Database ok" e "Server started on port 3333🚀" no terminal.
-É importante notar que o projeto só poderá ser executado se o banco de dados já estiver rodando.
+    3.Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
+    npm run server
+    Se tudo estiver correto, você verá a mensagem "Database ok" e "Server started on port 3333🚀" no terminal.
+    É importante notar que o projeto só poderá ser executado se o banco de dados já estiver rodando.
 
-# 4. Documentação com uma explicação do formato de entrada esperado de cada rota,
+# 4. Documentação com uma explicação do formato de entrada esperado de cada rota,bem como o formato de saída de dados de cada rota.
 
-bem como o formato de saída de dados de cada rota.
+    OBS:Juntamento coma pasta api também se encontam um Arquivo Json Do Insomnia
+        e um Arquivo de dump das tabelas do banco de dados após abrir VS Code é
+        só arratar para seu maquina para extrair
 
 1.) Para importar o arquivo test.sql em seu gerenciador de banco de dados favorito, você pode seguir os seguintes passos:
 
-1.1 bra o VScode e acesse o arquivo test.sql que está localizado abaixo do arquivo README no repositório.
+    1.1 bra o VScode e acesse o arquivo test.sql que está localizado abaixo do arquivo README no repositório.
 
-1.2 Clique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
+    1.2 Clique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
 
-1.3 Abra o gerenciador de banco de dados e selecione a opção de importação.
+    1.3 Abra o gerenciador de banco de dados e selecione a opção de importação.
 
-1.4 Cole o caminho do arquivo que você copiou na etapa 2 no campo "Caminho do arquivo".
+    1.4 Cole o caminho do arquivo que você copiou na etapa 2 no campo "Caminho do arquivo".
 
-1.4 Selecione o banco de dados que você deseja importar e clique em "Importar".
+    1.4 Selecione o banco de dados que você deseja importar e clique em "Importar".
 
 2.) Para importar o arquivo JSON do Insomnia para o seu ambiente local, siga estes passos:
 
-2.1 Navegue até a pasta "api" no repositório.
+    2.1 Navegue até a pasta "api" no repositório.
 
-2.2 Localize o arquivo JSON que você deseja importar para o Insomnia.
+    2.2 Localize o arquivo JSON que você deseja importar para o Insomnia.
 
-2.3 lique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
+    2.3 lique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
 
-2.4 Abra o Insomnia e clique em "Importar/Exportar" no menu principal.
+    2.4 Abra o Insomnia e clique em "Importar/Exportar" no menu principal.
 
-2.5 Selecione "Importar dados" e escolha "Da área de trabalho".
+    2.5 Selecione "Importar dados" e escolha "Da área de trabalho".
 
-2.6 Cole o caminho do arquivo que você copiou na etapa 3 no campo "Caminho do arquivo".
+    2.6 Cole o caminho do arquivo que você copiou na etapa 3 no campo "Caminho do arquivo".
 
-2.7 elecione o arquivo JSON e clique em "Importar".
+    2.7 elecione o arquivo JSON e clique em "Importar".
