@@ -1,6 +1,6 @@
 # Desafio-NodeJs-API-Rest
 
-# 1. Tecnologias utilizadas com suas respectivas versões (MySQL, Node.JS, Express.js);
+# 1. Tecnologias utilizadas com suas respectivas versões.
 
 MySQL: Banco de dados utilizado para armazenar e gerenciar os dados. Para simular o banco de dados localmente, foi utilizado o XAMPP, uma ferramenta que inclui o MySQL, PHP e Apache em um pacote fácil de instalar. Foi baixada a versão 8.2.4 do XAMPP, que inclui o MySQL 8.2.4.
 link para baixar: https://www.apachefriends.org/pt_br/download.html
@@ -48,13 +48,14 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
     1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
     Em seguida, digite o seguinte comando:
-    gh repo clone AllanFelizzeti/Desafio-NodeJs-API-Rest
+    - gh repo clone AllanFelizzeti/Desafio-NodeJs-API-Rest
     Isso irá clonar o repositório do GitHub para a sua máquina.
 
     2.Abra a pasta "api" do projeto no seu editor de código favorito e, em seguida, abra o terminal.
     Para instalar as dependências do projeto, digite o seguinte comando:
-    npm install
-    yarn install
+    - npm install
+    ou
+    - yarn install
     Isso irá instalar todas as dependências necessárias para executar o projeto.
 
     3.Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
@@ -64,13 +65,13 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
 # 4. Documentação com uma explicação do formato de entrada esperado de cada rota,bem como o formato de saída de dados de cada rota.
 
-    OBS:Juntamento coma pasta api também se encontam um Arquivo Json Do Insomnia
+    OBS:Juntamente com API também se encontam um Arquivo Json Do Insomnia
         e um Arquivo de dump das tabelas do banco de dados após abrir VS Code é
         só arratar para seu maquina para extrair
 
 1.) Para importar o arquivo test.sql em seu gerenciador de banco de dados favorito, você pode seguir os seguintes passos:
 
-    1.1 bra o VScode e acesse o arquivo test.sql que está localizado abaixo do arquivo README no repositório.
+    1.1 Abra o VScode e acesse o arquivo test.sql que está localizado abaixo do arquivo README no repositório.
 
     1.2 Clique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
 
@@ -86,7 +87,7 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
     2.2 Localize o arquivo JSON que você deseja importar para o Insomnia.
 
-    2.3 lique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
+    2.3 Clique com o botão direito do mouse no arquivo e selecione "Copiar caminho do arquivo".
 
     2.4 Abra o Insomnia e clique em "Importar/Exportar" no menu principal.
 
@@ -94,4 +95,18 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
     2.6 Cole o caminho do arquivo que você copiou na etapa 3 no campo "Caminho do arquivo".
 
-    2.7 elecione o arquivo JSON e clique em "Importar".
+    2.7 Selecione o arquivo JSON e clique em "Importar".
+
+# 5 Que o banco de dados possua chaves estrangeiras que mantenha a integridade entre as duas tabelas (toda licença deve pertencer a uma empresa)
+
+    Aqui nesse quesito ao importar o arquivo.sql o mesmo não trouxe a Chave estrageira
+    no campo empresa_id, para fazer isso é preciso no gerenciador de banco de dados, excluir
+    a migration CreateLicencataple... e a e drop a tabela lecenca.
+
+    Após isso no treminal do projeto pare a aplicação e rode o comando a baixo
+    - npm run typeorm -- -d ./src/database/data-source.ts migration:run
+    esse comando vai gerar a tabela novamente com a Chave estrangeira.
+
+    Para ver o relacionamento no PHPAdmin selecione a tabela no menu superior term um
+    botão Insert clique nele, no compo empresa_id vera que já esta buxando o id das empresas
+    já cadastradas.
