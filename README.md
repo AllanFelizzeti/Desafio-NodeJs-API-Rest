@@ -26,48 +26,75 @@ Além disso, foram utilizadas as seguintes dependências de desenvolvimento:
     "ts-node-dev": "^2.0.0": Monitoramento de arquivos TypeScript para reinicialização automática do servidor
     "typescript": "4.5.2": Linguagem de programação utilizada para escrever o código-fonte do projeto.
 
-# 2. Orientações de execução do banco de dados, com sua estrutura (incluir Dump SQL das tabelas);
+# 2. Orientações de instalação e execução do ambiente em localhost;
+
+    1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
+    Em seguida, digite o seguinte comando:
+
+    git clone https://github.com/AllanFelizzeti/Desafio-NodeJs-API-Rest.git
+
+    Isso irá clonar o repositório do GitHub para a sua máquina.
+
+    2.Navegue pelas pastas do projeto até a pasta desafioRest e abra no seu editor de código favorito e, em seguida, abra o terminal.
+    Para instalar as dependências do projeto, digite o seguinte comando:
+    npm install
+    ou
+    yarn install
+    Isso irá instalar todas as dependências necessárias para executar o projeto.
+
+# 3. Orientações de execução do banco de dados, com sua estrutura (incluir Dump SQL das tabelas);
 
 Para isso, basta iniciar o XAMPP e iniciar os serviços do Apache e do MySQL. Em seguida, acesse o painel de controle do MySQL clicando no botão "Admin" ao lado da linha correspondente ao MySQL. Isso abrirá o phpMyAdmin, uma ferramenta de gerenciamento de banco de dados.
 
 Para importar o dump para um banco de dados vazio ou para um banco de dados existente, siga os seguintes passos:
 
-    1.Crie um banco de dados vazio ou selecione o banco de dados existente para o qual deseja importar o dump.
+    1.Crie um banco de dados vazio ou selecione o banco de dados existente para o qual deseja importar o dump, no phpMyAdmin.
 
     2.No phpMyAdmin, selecione o banco de dados para o qual deseja importar o dump.
 
     3.Clique na guia "Importar" na parte superior da página.
 
-    4.Selecione o arquivo de dump SQL que deseja importar.
+    2. Navegue pelas pastas do projeto até encontrar a pasta 'api', selecione o arquivo SQL que deseja importar.
 
     5.Clique no botão "Executar" na parte inferior da página para iniciar a importação.
 
 Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tutorial pode ser encontrado no seguinte link: https://www.youtube.com/watch?v=mFI88qPAdJI. Após a importação, o banco de dados deve estar pronto para ser utilizado novamente.
 
-# 3. Orientações de instalação e execução do ambiente em localhost;
+# 4. Execução da aplicação;
 
-    1.Abra o Prompt de Comando e navegue para a área do seu sistema onde deseja clonar o repositório.
-    Em seguida, digite o seguinte comando:
-    - gh repo clone AllanFelizzeti/Desafio-NodeJs-API-Rest
-    Isso irá clonar o repositório do GitHub para a sua máquina.
+Após a instalação das dependências e da configuração do banco de dados, execute o seguinte comando para iniciar o servidor:
+1.Navegue pelas pastas do projeto até a pasta desafioRest no editor de código, pelo terminal e rode o comando:
+npm run server
+Se tudo estiver correto, você verá a mensagem "Database ok" e "Server started on port 3333🚀" no terminal.
+É importante notar que o projeto só poderá ser executado se o banco de dados já estiver rodando.
 
-    2.Abra a pasta "api" do projeto no seu editor de código favorito e, em seguida, abra o terminal.
-    Para instalar as dependências do projeto, digite o seguinte comando:
-    - npm install
-    ou
-    - yarn install
-    Isso irá instalar todas as dependências necessárias para executar o projeto.
+Após isso para fazer os teste das rotas disponiveis logo abaixo da pasta API um arquivo Insomnia_testeDasrotas
+que é um tipo json nesse arquivo contém todas as rotas.
 
-    3.Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
-    npm run server
-    Se tudo estiver correto, você verá a mensagem "Database ok" e "Server started on port 3333🚀" no terminal.
-    É importante notar que o projeto só poderá ser executado se o banco de dados já estiver rodando.
+# 5. Documentação com uma explicação do formato de entrada esperado de cada rota,bem como o formato de saída de dados de cada rota.
 
-# 4. Documentação com uma explicação do formato de entrada esperado de cada rota,bem como o formato de saída de dados de cada rota.
+    OBS: Juntamente com API também se encontam um Arquivo Json Do Insomnia
+        e um Arquivo de dump das tabelas do banco de dados, após clonar o repositorio
+        só abrir VS Code é só arratar para seu maquina para extrair.
 
-    OBS:Juntamente com API também se encontam um Arquivo Json Do Insomnia
-        e um Arquivo de dump das tabelas do banco de dados após abrir VS Code é
-        só arratar para seu maquina para extrair
+        Se tudo estiver ok so abrir o Insomnia importar o arquivo descrito acima usando passo a passo 2 desse modulo
+        primeira rota a ser testada deve ser Post para criar uma Empresa, em seguida a Get para ver a Empresa criada.
+        Assim é possivel testar a rota Put para mudar algum dado da Empresa.
+        Há também a Post para criar uma Licença passando o id da empresa em seguida a rota Get para ver a licença criada.
+        A seguir é possível testar a Put alterando algum dados da Licença por último a Delete para exluir algum dado da Licença
+        e a´pos o Delete da Empresa.
+
+        OBS: Nas rotas de PUT e Belete http://localhost:3333/lice/1 nunca esqueça de passar o id que deseja alterar ou deletar.
+
+        video de instalação do Insomnia: https://www.youtube.com/watch?v=4mZwTUXndUs
+
+        Para importar um aruivo para o Insomnia faça:
+           - no canto inferior esquerdo tem Preferences clique
+           - vai abri uma tela Insomnia Preferences
+           - logo abaixo tera um menu escolha Data clique em importar
+           - escolha ou arraste o arquivo clique em scan e depoid e importar
+           - pronto vai abrir já na interface pricital só trocar de Design para Debug
+           - as rotas estão dividas e, duas pastas Licença e Empresa
 
 1.) Para importar o arquivo test.sql em seu gerenciador de banco de dados favorito, você pode seguir os seguintes passos:
 
@@ -97,7 +124,7 @@ Para mais detalhes sobre como fazer a importação do arquivo SQL, um vídeo tut
 
     2.7 Selecione o arquivo JSON e clique em "Importar".
 
-# 5 Que o banco de dados possua chaves estrangeiras que mantenha a integridade entre as duas tabelas (toda licença deve pertencer a uma empresa)
+# 6. Que o banco de dados possua chaves estrangeiras que mantenha a integridade entre as duas tabelas (toda licença deve pertencer a uma empresa)
 
     Aqui nesse quesito ao importar o arquivo.sql o mesmo não trouxe a Chave estrageira
     no campo empresa_id, para fazer isso é preciso no gerenciador de banco de dados, excluir
